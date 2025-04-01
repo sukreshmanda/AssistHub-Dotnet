@@ -1,6 +1,15 @@
 @Backend_HostAddress = http://localhost:5051
 
+### Basic Health Check
 GET {{Backend_HostAddress}}/hell-thy
 Accept: application/json
 
-###
+### Create a Ticket
+POST {{Backend_HostAddress}}/api/Ticket
+Content-Type: application/json
+
+{
+  "Title": "Some Dummy Title",
+  "Description": "Some dummy description",
+  "Priority": 1
+}

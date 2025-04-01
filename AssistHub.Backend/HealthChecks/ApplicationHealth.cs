@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
-namespace AssistHub.Backend.HealthCheck;
+namespace AssistHub.Backend.HealthChecks;
 
 public class ApplicationHealth : IHealthCheck
 {

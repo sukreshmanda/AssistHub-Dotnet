@@ -1,16 +1,16 @@
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
-namespace AssistHub.Backend.HealthCheck;
+namespace AssistHub.Backend.HealthChecks;
 
 public static class HealthServicesExtensions
 {
-    public static void AddHealthServices(this IServiceCollection services)
+    public static void AddAssistHubHealthServices(this IServiceCollection services)
     {
         services.AddHealthChecks()
             .AddCheck<ApplicationHealth>("Application", tags: ["application"]);
     }
 
-    public static void MapHealthServices(this WebApplication app)
+    public static void MapAssistHubHealthServices(this WebApplication app)
     {
         app.MapHealthChecks("/hell-thy", new HealthCheckOptions()
         {
