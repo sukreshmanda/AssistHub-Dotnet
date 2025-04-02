@@ -6,6 +6,6 @@ public static class RepositoriesExtensions
 {
     public static void AddAssistHubGuidBasedRepositories(this IServiceCollection services)
     {
-        services.AddScoped<IGuidBasedRepository<Ticket>, GuidBasedRepositoryBase<Ticket>>();
+        services.AddSingleton<IGuidBasedRepository<Ticket>, GuidBasedRepositoryBase<Ticket>>();
     }
 }

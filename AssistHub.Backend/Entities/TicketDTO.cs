@@ -14,7 +14,9 @@ public class TicketCreateRequest
             Title = Title,
             Description = Description,
             Status = TicketStatus.Open,
-            Priority = TicketPriority.Low
+            Priority = TicketPriority.Low,
+            CreatedAt = DateTime.Now,
+            UpdatedAt = DateTime.Now,
         };
     }
 }

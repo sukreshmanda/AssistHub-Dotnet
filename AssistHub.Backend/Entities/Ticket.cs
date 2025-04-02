@@ -6,6 +6,12 @@ public class Ticket : GuidBasedEntity
     public string Description { get; set; } = null!;
     public TicketPriority Priority { get; set; }
     public TicketStatus Status { get; set; }
+
+    public void UpdateStatus(TicketStatus status)
+    {
+        Status = status;
+        UpdatedAt = DateTime.UtcNow;
+    }
 }
 
 public enum TicketPriority

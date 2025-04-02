@@ -42,6 +42,11 @@ public class GuidBasedRepositoryBase<T> : IGuidBasedRepository<T> where T : Guid
         throw new Exception("Entity not found");
     }
 
+    public void DeleteById(Guid id)
+    {
+        Entities.RemoveAll(x => x.Id == id);
+    }
+
     public T Get(Guid id)
     {
         var firstOrDefault = Entities.FirstOrDefault(e => e.Id == id);

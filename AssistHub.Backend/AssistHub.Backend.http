@@ -13,3 +13,7 @@ Content-Type: application/json
   "Description": "Some dummy description",
   "Priority": 1
 }
+
+### Get ticket
+GET {{Backend_HostAddress}}/api/Ticket/5eaff326-9e5f-407c-82fa-424dae27998c
+Accept: application/json

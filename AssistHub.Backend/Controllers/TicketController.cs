@@ -14,7 +14,26 @@ public class TicketController(TicketService ticketService, IValidator<TicketCrea
     public IActionResult Create([FromBody] TicketCreateRequest request)
     {
         ticketCreateValidator.ValidateAndThrow(request);
-        ticketService.Create(request);
+        return Ok(ticketService.Create(request));
+    }
+
+    [HttpGet("{ticketId:guid}")]
+    public IActionResult Get([FromRoute] Guid ticketId)
+    {
+        return Ok(ticketService.GetById(ticketId));
+    }
+
+    [HttpPut("{ticketId:guid}/status")]
+    public IActionResult UpdateStatus([FromRoute] Guid ticketId, [FromBody] TicketStatus status)
+    {
+        ticketService.UpdateStatus(ticketId, status);
+        return Ok();
+    }
+
+    [HttpDelete("{ticketId:guid}")]
+    public IActionResult Delete([FromRoute] Guid ticketId)
+    {
+        ticketService.Delete(ticketId);
         return Ok();
     }
 }
