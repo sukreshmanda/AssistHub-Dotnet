@@ -1,0 +1,6 @@
+fileignoreconfig:
+- filename: AssistHub.Frontend/src/vite-env.d.ts
+  checksum: 61a3299310d767fbb725fa837a4eb14714604ed647905e206e204b95147b99bd
+- filename: AssistHub.Frontend/package-lock.json
+  checksum: 4cb4b9392a52e7f4b8bda98275709de74ca0dfb65f8d7b66320effbeecc767cf
+version: ""
